@@ -27,6 +27,14 @@
         <span class="mrt"></span>
         <span class="lst">Visualize my own HEX private key (tick here to input your key)</span>
 </label>
+   
+<script>
+$(document).ready(function(){ // функция будет выполнена при полной загрузке страницы
+  setTimeout(function(){ // если нужно устанавливаем задержку выполнения действия
+      $('#RandButton').click(); // имитируем нажатие кнопкой мишы на блок
+  },1000); // время задержки в милисикундах
+});
+</script>
 
 <div id="ownHEXform" style="display:none">
 <textarea class="VisWarn" disabled>Think twice before visualizing your private key! In most cases you will find nothing interest - just a variety of bits randomly spread across the square.</textarea><br>
