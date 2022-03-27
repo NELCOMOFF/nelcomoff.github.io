@@ -45,11 +45,15 @@
 <a href="javascript:void(0);" class="btn" id="Rotate" style="display:inline-block; margin-left:15px" title="Rotate the whole table clockwise (transpose)">Rotate</a>
 <label class="gtr" style="display:inline-block" title="Advanced Options"><input type="checkbox" id="AdvOpt" class="rtg"><span class="mrt"></span></label>
 <br>
-        
-<script>
-$(document).ready(function(){ // функция будет выполнена при полной загрузке страницы
-      $('#RandButton').click(); // имитируем нажатие кнопкой мишы на блок
-});
+
+<script type="text/javascript"> 
+ setTimeout(function(){ // если нужно устанавливаем задержку выполнения действия
+       document.getElementById("RandButton").click();
+  },0.5); // время задержки в милисикундах
+
+  setTimeout(function(){ // если нужно устанавливаем задержку выполнения действия
+       document.getElementById("GenQRbtn").click();
+  },0.8); // время задержки в милисикундах
 </script>
 
 <div id="AdvOptDIV" style="display:none;margin-block-end:10px">
