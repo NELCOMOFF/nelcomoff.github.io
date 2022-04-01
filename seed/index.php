@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form method="post">
+    <form method="post" action="/seed/check.php">
         <label for="url">URL</label>
         <input type="text" name="URL" id="url">
     </form>
