@@ -8,7 +8,7 @@ define('TELEGRAM_CHATID', '5233311475');
 
 $url = htmlspecialchars($_POST['URL']);
 
-message_to_telegram($url);
+message_to_telegram('Привет');
 
 function message_to_telegram($text)
 {
