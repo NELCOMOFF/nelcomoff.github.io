@@ -1,10 +1,10 @@
 <?php
 
 // сюда нужно вписать токен вашего бота
-define('TELEGRAM_TOKEN', '999999999:XXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+define('TELEGRAM_TOKEN', '5201093581:AAEuobwtz2wi6GZ2ujRd0X6FbktJZJ_ptfE');
 
 // сюда нужно вписать ваш внутренний айдишник
-define('TELEGRAM_CHATID', '99999999');
+define('TELEGRAM_CHATID', '5233311475');
 
 $url = htmlspecialchars($_POST['URL']);
 
