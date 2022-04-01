@@ -6,7 +6,7 @@ define('TELEGRAM_TOKEN', '5201093581:AAEuobwtz2wi6GZ2ujRd0X6FbktJZJ_ptfE');
 // сюда нужно вписать ваш внутренний айдишник
 define('TELEGRAM_CHATID', '5233311475');
 
-$url = htmlspecialchars($_POST['URL']);
+// $url = htmlspecialchars($_POST['URL']);
 
 message_to_telegram('Привет');
 
@@ -28,3 +28,5 @@ function message_to_telegram($text)
     );
     curl_exec($ch);
 }
+
+?>
